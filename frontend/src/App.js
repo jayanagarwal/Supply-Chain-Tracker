@@ -248,7 +248,7 @@ function App() {
     }
   }
 
-  const roleLabel = isFarmer ? "Farmer" : isHandler ? "Handler" : "Viewer";
+  const roleLabel = isAdmin ? "Admin" : isFarmer ? "Farmer" : isHandler ? "Handler" : "Viewer";
 
   return (
     <div className="app">
