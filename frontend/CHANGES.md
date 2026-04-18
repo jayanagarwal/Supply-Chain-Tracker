@@ -116,13 +116,13 @@ Import test accounts using the private keys printed by the Hardhat node. The see
 
 ### frontend/src/deployment.json
 
-- Contract address updated to the Sepolia deployment: `0x9b9c336224b696F4ca42F106063502BBb37c44eC`
+- Contract address updated to the Sepolia deployment: `0x6810052b579fE1A9B629204Ae01243783e739eCC`
 - Network field updated from `localhost` to `sepolia`
 
 ---
 
 ## Contract (Sepolia)
 
-- **Address:** `0x9b9c336224b696F4ca42F106063502BBb37c44eC`
+- **Address:** `0x6810052b579fE1A9B629204Ae01243783e739eCC`
 - **Network:** Sepolia testnet
-- **Verified on Etherscan:** https://sepolia.etherscan.io/address/0x9b9c336224b696F4ca42F106063502BBb37c44eC#code
+- **Verified on Etherscan:** https://sepolia.etherscan.io/address/0x6810052b579fE1A9B629204Ae01243783e739eCC

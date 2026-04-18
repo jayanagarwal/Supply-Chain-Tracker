@@ -30,11 +30,11 @@ module.exports = {
     },
     // Sepolia testnet — requires ALCHEMY_API_KEY & DEPLOYER_PRIVATE_KEY in .env
     sepolia: {
-      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY || ""}`,
+      url: process.env.ALCHEMY_API_KEY ? `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}` : "https://ethereum-sepolia-rpc.publicnode.com",
       accounts:
         process.env.DEPLOYER_PRIVATE_KEY
           ? [process.env.DEPLOYER_PRIVATE_KEY]
-          : [], // empty array = no accounts (won't crash if .env not set)
+          : [], 
     },
   },
 
