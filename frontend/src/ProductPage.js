@@ -76,6 +76,7 @@ function ProductPage() {
 
   useEffect(() => {
     if (window.ethereum) connectAndLoad();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
