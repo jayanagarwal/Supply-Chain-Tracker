@@ -286,11 +286,12 @@ See [FRONTEND_HANDOFF.md](./FRONTEND_HANDOFF.md) for the full integration guide 
 
 ---
 
-## Deployed Contract
+## Deployed Project
 
-| Network | Address | Etherscan |
-|---------|---------|-----------|
-| Sepolia | `TBD` | `TBD` |
+| Component | URL |
+|-----------|-----|
+| **Live Web App** | [https://supply-chain-tracker-6iwrr3qg9-jayan-agarwals-projects.vercel.app](https://supply-chain-tracker-6iwrr3qg9-jayan-agarwals-projects.vercel.app) |
+| **Smart Contract (Sepolia)** | [`0x6810052b579fE1A9B629204Ae01243783e739eCC`](https://sepolia.etherscan.io/address/0x6810052b579fE1A9B629204Ae01243783e739eCC) |
 
 ---
 
