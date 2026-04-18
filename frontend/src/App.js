@@ -217,12 +217,14 @@ function App() {
     if (!grantRoleType) { setGrantStatus("Please select a role.");           return; }
     setGrantStatus("Submitting...");
     try {
-      const role = grantRoleType === "farmer"
-        ? await contract.FARMER_ROLE()
-        : await contract.HANDLER_ROLE();
+      let role;
+      if (grantRoleType === "admin") role = await contract.DEFAULT_ADMIN_ROLE();
+      else if (grantRoleType === "farmer") role = await contract.FARMER_ROLE();
+      else role = await contract.HANDLER_ROLE();
+
       const tx = await contract.grantRole(role, grantAddress);
       await tx.wait();
-      const label = grantRoleType === "farmer" ? "Farmer" : "Handler";
+      const label = grantRoleType === "admin" ? "Admin" : grantRoleType === "farmer" ? "Farmer" : "Handler";
       setGrantStatus(`${label} role granted to ${grantAddress.slice(0,6)}...${grantAddress.slice(-4)}`);
       setGrantAddress("");
       setGrantRoleType("");
@@ -504,6 +506,7 @@ function App() {
                   />
                   <select value={grantRoleType} onChange={e => setGrantRoleType(e.target.value)}>
                     <option value="">Select role</option>
+                    <option value="admin">Admin</option>
                     <option value="farmer">Farmer</option>
                     <option value="handler">Handler</option>
                   </select>
